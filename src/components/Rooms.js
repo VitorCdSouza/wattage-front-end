@@ -5,10 +5,10 @@ const Rooms = (props) => (
         <h1 className="py-4 lg:ps-10 ps-6 text-3xl font-semibold">Rooms</h1>
         <hr />
 
-        <div className="pt-8 lg:ps-12 ps-6 pr-6">
+        <div className="pt-8 lg:ps-10 ps-6 pr-6">
             <h2 className="text-2xl font-semibold pb-8">Your Rooms:</h2>
 
-            <div className="flex flex-wrap gap-4 md:gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-3">
                 <RoomCard
                     roomName="Bedroom"
                 />
