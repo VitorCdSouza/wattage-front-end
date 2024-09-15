@@ -1,16 +1,17 @@
-import SideBar from "./components/SideBar"
+import Room from "./components/Room";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen w-full">
       {/* sidebar at left */}
-      <div className="sm:basis-0 lg:basis-[30%]">
+      <div className="hidden lg:block lg:basis-72">
         <SideBar />
       </div>
 
-      {/* login at right */}
-      <div className="w-full sm:basis-full lg:basis-[70%] flex items-center justify-center bg-white">
-
+      {/* content at right */}
+      <div className="flex bg-white lg:basis-full">
+        <Room />
       </div>
     </div>
   );
