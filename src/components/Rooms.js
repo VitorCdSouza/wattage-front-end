@@ -1,6 +1,6 @@
 import RoomCard from "./RoomCard"
 
-const Room = (props) => (
+const Rooms = (props) => (
     <div className="w-full">
         <h1 className="py-4 lg:ps-10 ps-6 text-3xl font-semibold">Rooms</h1>
         <hr />
@@ -41,4 +41,4 @@ const Room = (props) => (
     </div>
 )
 
-export default Room
+export default Rooms
