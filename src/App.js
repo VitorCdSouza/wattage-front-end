@@ -5,12 +5,12 @@ function App() {
   return (
     <div className="flex h-screen w-full font-sans">
       {/* sidebar at left */}
-      <div className="hidden lg:block lg:basis-80">
+      <div className="h-full hidden lg:block lg:basis-80">
         <SideBar />
       </div>
 
       {/* content at right */}
-      <div className="ms-4 flex bg-white lg:basis-full">
+      <div className="flex bg-white lg:basis-full">
         <Outlet />
       </div>
     </div>

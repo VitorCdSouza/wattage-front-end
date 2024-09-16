@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import RoomCard from "./RoomCard"
 
 const Devices = (props) => {
-    const [rooms, setRooms] = useState([])
+    const [devices, setDevices] = useState([])
 
     useEffect(() => {
-        setRooms([
+        setDevices([
             { id: 1, name: "Bedroom 1", devices: 3, wattage_sum: 300 },   // 1 lamp (50W), 1 fan (100W), 1 TV (150W)
             { id: 2, name: "Bedroom 2", devices: 3, wattage_sum: 350 },   // 1 lamp (50W), 1 fan (100W), 1 PC (200W)
             { id: 3, name: "Bedroom 3", devices: 4, wattage_sum: 500 },   // 2 lamps (100W), 1 fan (100W), 1 TV (300W)
@@ -19,14 +19,14 @@ const Devices = (props) => {
 
     return (
         <div className="w-full">
-            <h1 className="py-4 lg:ps-10 ps-6 text-3xl font-semibold">Rooms</h1>
+            <h1 className="py-4 lg:ps-10 ps-6 text-3xl font-semibold">Devices</h1>
             <hr />
 
             <div className="pt-8 lg:ps-10 ps-6 pr-6">
-                <h2 className="text-2xl font-semibold pb-8">Your Rooms:</h2>
+                <h2 className="text-2xl font-semibold pb-8">Your Devices:</h2>
 
                 <div className="flex flex-wrap gap-3 md:gap-3">
-                    {rooms.map((r) => (
+                    {devices.map((r) => (
                         <RoomCard
                             roomName={r.name}
                             devices={r.devices}

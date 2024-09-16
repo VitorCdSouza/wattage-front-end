@@ -1,5 +1,5 @@
 const RoomCard = (props) => (
-    <div className={props.className + " 2xl:w-60 w-full sm:w-[calc(50%-0.5rem)] p-6 bg-neutral-900 border border-gray-200 rounded-lg shadow"}>
+    <div className={props.className + " 2xl:w-60 w-full sm:w-[calc(50%-0.5rem)] p-6 bg-neutral-900 border border-gray-200 rounded-2xl shadow"}>
         <p>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{props.roomName}</h5>
         </p>

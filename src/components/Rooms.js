@@ -18,28 +18,29 @@ const Rooms = (props) => {
     }, [])
 
     return (
-        <div className="lg:w-full">
+        <div className="w-full">
             <h1 className="py-4 lg:ps-10 ps-6 text-3xl font-semibold">Rooms</h1>
-            <hr />
+            <hr className="w-full border-t border-gray-300 mx-0" />
 
-            <div className="pt-8 lg:ps-10 ps-6 pr-6 w-full">
+
+            <div className="pt-8 lg:px-10 px-3 w-screen lg:w-full">
                 <h2 className="text-2xl font-semibold pb-8">Your Rooms:</h2>
 
-                <div className="overflow-x-auto pr-4">
-                    <table className="min-w-[640px] lg:text-sm text-lg overflow-x-auto w-full table-fixed border-collapse border border-gray-300">
+                <div className="rounded-2xl overflow-x-auto bg-gray-100 shadow-gray-600 shadow-sm p-3">
+                    <table className="min-w-[600px] lg:text-sm text-base lg:text-lg overflow-x-auto w-full table">
                         <thead className="bg-neutral-900">
                             <tr>
-                                <th className="text-white border border-gray-300 px-4 py-2 text-left w-40">Room Name</th>
-                                <th className="text-white border border-gray-300 px-4 py-2 text-left w-24">Devices</th>
-                                <th className="text-white border border-gray-300 px-4 py-2 text-left w-28">Total Wattage</th>
+                                <th className="text-white px-4 py-2 text-left w-30 rounded-tl-xl">Room Name</th>
+                                <th className="text-white px-4 py-2 text-left w-30">Devices</th>
+                                <th className="text-white px-4 py-2 text-left w-30 rounded-tr-xl">Total Wattage</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {rooms.map((room) => (
+                            {rooms.map((room, index) => (
                                 <tr key={room.id} className="bg-white">
-                                    <td className="border border-gray-300 pl-4 py-2">{room.name}</td>
-                                    <td className="border border-gray-300 pl-4 py-2">{room.devices}</td>
-                                    <td className="border border-gray-300 pl-4 py-2">{room.wattage_sum}W</td>
+                                    <td className={`pl-4 py-2 w-30 ${index === rooms.length - 1 ? 'rounded-bl-xl' : ''}`}>{room.name}</td>
+                                    <td className="pl-4 py-2 w-30">{room.devices}</td>
+                                    <td className={`pl-4 py-2 w-30 ${index === rooms.length - 1 ? 'rounded-br-xl' : ''}`}>{room.wattage_sum}W</td>
                                 </tr>
                             ))}
                         </tbody>
