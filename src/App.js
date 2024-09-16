@@ -3,7 +3,7 @@ import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div className="flex h-screen w-full">
+    <div className="flex h-screen w-full font-sans">
       {/* sidebar at left */}
       <div className="hidden lg:block lg:basis-80">
         <SideBar />
